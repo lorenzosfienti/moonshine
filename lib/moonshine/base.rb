@@ -6,7 +6,7 @@ module Moonshine
     include DSL
 
     def initialize(params, subject = nil)
-      @subject = subject || self.class.default_subject.call
+      @subject = subject || self.class.default_subject.all
       @params = params
       @chain = []
       if self.class.default_chain
